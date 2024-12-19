@@ -68,13 +68,15 @@ phpcs-report.txt
 __tests/_output
 __tests/_data
 codeception.yml
-.env.local
 
-.scannerwork
+.env.local
 output.txt
 /wordpress/
+.scannerwork
 output.csv
 /code_coverage/
 /test-results/
 /artifacts/
 /tests/
+.astro
+dist
