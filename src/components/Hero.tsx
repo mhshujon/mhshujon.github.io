@@ -31,13 +31,13 @@ export default function Hero() {
               </a>
             </div>
             <div className="flex gap-4 text-gray-600">
-              <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="hover:text-blue-600 transition">
+              <a href="https://github.com/mhshujon" target="_blank" rel="noopener noreferrer" className="hover:text-blue-600 transition">
                 <Github size={24} />
               </a>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="hover:text-blue-600 transition">
+              <a href="https://linkedin.com/in/mhshujon" target="_blank" rel="noopener noreferrer" className="hover:text-blue-600 transition">
                 <Linkedin size={24} />
               </a>
-              <a href="mailto:your.email@example.com" className="hover:text-blue-600 transition">
+              <a href="mailto:mhshujon@gmail.com" className="hover:text-blue-600 transition">
                 <Mail size={24} />
               </a>
             </div>
