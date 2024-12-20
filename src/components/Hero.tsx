@@ -1,5 +1,5 @@
-import React from 'react';
 import { Github, Linkedin, Mail } from 'lucide-react';
+import { EMAIL_ID, GITHUB_URL, LINKEDIN_URL } from '../constants/social';
 
 export default function Hero() {
   return (
@@ -31,13 +31,13 @@ export default function Hero() {
               </a>
             </div>
             <div className="flex gap-4 text-gray-600">
-              <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="hover:text-blue-600 transition">
+              <a href={GITHUB_URL} target="_blank" rel="noopener noreferrer" className="hover:text-blue-600 transition">
                 <Github size={24} />
               </a>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="hover:text-blue-600 transition">
+              <a href={LINKEDIN_URL} target="_blank" rel="noopener noreferrer" className="hover:text-blue-600 transition">
                 <Linkedin size={24} />
               </a>
-              <a href="mailto:your.email@example.com" className="hover:text-blue-600 transition">
+              <a href={`mailto:${EMAIL_ID}`} className="hover:text-blue-600 transition">
                 <Mail size={24} />
               </a>
             </div>

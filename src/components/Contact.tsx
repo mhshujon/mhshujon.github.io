@@ -1,4 +1,4 @@
-import React from 'react';
+import { EMAIL_ID, GITHUB_URL, LINKEDIN_URL } from '../constants/social';
 import { MessageSquare, Mail, Github, Linkedin, MapPin } from 'lucide-react';
 
 export default function Contact() {
@@ -30,7 +30,7 @@ export default function Contact() {
                   <h4 className="font-semibold mb-4">Connect with me</h4>
                   <div className="flex gap-4">
                     <a
-                      href="https://github.com"
+                      href={GITHUB_URL}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="p-2 bg-white/10 rounded-full hover:bg-white/20 transition-colors"
@@ -38,7 +38,7 @@ export default function Contact() {
                       <Github size={20} />
                     </a>
                     <a
-                      href="https://linkedin.com"
+                      href={LINKEDIN_URL}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="p-2 bg-white/10 rounded-full hover:bg-white/20 transition-colors"
@@ -46,7 +46,7 @@ export default function Contact() {
                       <Linkedin size={20} />
                     </a>
                     <a
-                      href="mailto:your.email@example.com"
+                      href={`mailto:${EMAIL_ID}`}
                       className="p-2 bg-white/10 rounded-full hover:bg-white/20 transition-colors"
                     >
                       <Mail size={20} />
