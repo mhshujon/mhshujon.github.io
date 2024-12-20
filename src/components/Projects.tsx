@@ -3,29 +3,35 @@ import { Code2, ExternalLink } from 'lucide-react';
 
 const projects = [
   {
-    title: "E-commerce Platform",
+    title: "Product Feed Manager for WooCommerce",
     description: "A full-featured e-commerce platform built with React, Node.js, and MongoDB. Includes user authentication, payment processing, and admin dashboard.",
     tech: ["React", "Node.js", "MongoDB", "Stripe"],
-    link: "https://github.com"
+    link: "https://wordpress.org/plugins/best-woocommerce-feed"
   },
   {
-    title: "Task Management System",
+    title: "Mail Mint - Email Marketing Automation Tool",
     description: "Real-time task management application with team collaboration features. Built using React and Firebase.",
     tech: ["React", "Firebase", "Material-UI", "Redux"],
-    link: "https://github.com"
+    link: "https://wordpress.org/plugins/mail-mint"
   },
   {
-    title: "Analytics Dashboard",
+    title: "WP VR – 360° Panorama and Free Virtual Tour Builder For WordPress",
     description: "Interactive analytics dashboard with data visualization using D3.js and React.",
     tech: ["React", "D3.js", "TypeScript", "REST API"],
-    link: "https://github.com"
+    link: "https://wordpress.org/plugins/wpvr"
   },
   {
-    title: "Social Media Platform",
+    title: "Cart Lift – Abandoned Cart Recovery for WooCommerce and EDD",
     description: "A social media platform with real-time messaging and post sharing capabilities.",
     tech: ["React", "Socket.io", "Express", "PostgreSQL"],
-    link: "https://github.com"
-  }
+    link: "https://wordpress.org/plugins/cart-lift"
+  },
+  {
+    title: "Product Recommendations for WooCommerce",
+    description: "Interactive analytics dashboard with data visualization using D3.js and React.",
+    tech: ["React", "D3.js", "TypeScript", "REST API"],
+    link: "https://wordpress.org/plugins/product-recommendations-addon-for-woocommerce/"
+  },
 ];
 
 export default function Projects() {
