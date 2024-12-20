@@ -1,5 +1,5 @@
 import { EMAIL_ID, GITHUB_URL, LINKEDIN_URL } from '../constants/social';
-import { MessageSquare, Mail, Github, Linkedin, MapPin } from 'lucide-react';
+import { MessageSquare, Mail, Github, Linkedin, MapPin, File } from 'lucide-react';
 
 export default function Contact() {
   return (
@@ -66,12 +66,14 @@ export default function Contact() {
                       <span className="text-blue-600 font-medium">Open to Collaboration</span>
                     </div>
                     <a
-                      href={LINKEDIN_URL}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="block w-full py-3 px-6 text-center bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+                        href={`../../assets/resume.pdf`}
+                        download={true}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="w-full py-3 px-6 text-center bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors flex items-center justify-center gap-2"
                     >
-                      Connect on LinkedIn
+                      <File size={20} />
+                      <span>Download Resume</span>
                     </a>
                   </div>
                 </div>
