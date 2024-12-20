@@ -66,7 +66,7 @@ export default function Contact() {
                       <span className="text-blue-600 font-medium">Open to Collaboration</span>
                     </div>
                     <a
-                      href="https://linkedin.com"
+                      href={LINKEDIN_URL}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="block w-full py-3 px-6 text-center bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
