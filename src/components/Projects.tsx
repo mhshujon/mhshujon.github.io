@@ -1,5 +1,5 @@
 import React from 'react';
-import { Code2 } from 'lucide-react';
+import { Code2, ExternalLink } from 'lucide-react';
 
 const projects = [
   {
@@ -32,35 +32,44 @@ export default function Projects() {
   return (
     <section id="projects" className="py-20">
       <div className="container mx-auto px-4">
-        <div className="flex items-center gap-2 mb-12">
+        <div className="flex items-center justify-center gap-2 mb-12">
           <Code2 className="text-blue-600" size={28} />
           <h2 className="text-3xl font-bold text-gray-800">Featured Projects</h2>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
           {projects.map((project, index) => (
-            <a
+            <div
               key={index}
-              href={project.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition transform hover:-translate-y-1"
+              className="group bg-white p-8 rounded-xl border-2 border-gray-100 hover:border-blue-500 transition-all duration-300"
             >
-              <h3 className="text-xl font-semibold text-gray-800 group-hover:text-blue-600 transition">
-                {project.title}
-              </h3>
-              <p className="mt-2 text-gray-700">{project.description}</p>
-              <div className="mt-4 flex flex-wrap gap-2">
-                {project.tech.map((tech, techIndex) => (
-                  <span
-                    key={techIndex}
-                    className="px-3 py-1 bg-blue-50 text-blue-600 rounded-full text-sm"
+              <div className="flex flex-col h-full">
+                <h3 className="text-2xl font-bold text-gray-800 mb-4 group-hover:text-blue-600 transition-colors">
+                  {project.title}
+                </h3>
+                <p className="text-gray-600 mb-6 flex-grow">{project.description}</p>
+                <div className="space-y-4">
+                  <div className="flex flex-wrap gap-2">
+                    {project.tech.map((tech, techIndex) => (
+                      <span
+                        key={techIndex}
+                        className="px-3 py-1 bg-blue-50 text-blue-600 rounded-full text-sm"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-700 transition-colors"
                   >
-                    {tech}
-                  </span>
-                ))}
+                    View Project <ExternalLink size={16} />
+                  </a>
+                </div>
               </div>
-            </a>
+            </div>
           ))}
         </div>
       </div>

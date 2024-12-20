@@ -13,7 +13,7 @@ export default function Hero() {
       </div>
       
       <div className="container mx-auto px-4 z-10">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-12">
+        <div className="flex flex-col md:flex-row lg:flex-row items-center justify-between gap-12">
           <div className="flex-1 space-y-6">
             <h1 className="text-5xl md:text-6xl font-bold text-gray-800 animate-fade-in">
               Web Application Engineer
@@ -31,13 +31,13 @@ export default function Hero() {
               </a>
             </div>
             <div className="flex gap-4 text-gray-600">
-              <a href="https://github.com/mhshujon" target="_blank" rel="noopener noreferrer" className="hover:text-blue-600 transition">
+              <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="hover:text-blue-600 transition">
                 <Github size={24} />
               </a>
-              <a href="https://linkedin.com/in/mhshujon" target="_blank" rel="noopener noreferrer" className="hover:text-blue-600 transition">
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="hover:text-blue-600 transition">
                 <Linkedin size={24} />
               </a>
-              <a href="mailto:mhshujon@gmail.com" className="hover:text-blue-600 transition">
+              <a href="mailto:your.email@example.com" className="hover:text-blue-600 transition">
                 <Mail size={24} />
               </a>
             </div>
