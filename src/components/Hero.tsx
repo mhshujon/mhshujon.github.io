@@ -26,8 +26,7 @@ export default function Hero() {
                 Web Application <span className="text-blue-600">Engineer</span>
               </h1>
               <p className="text-xl text-gray-600 animate-slide-up">
-                With over 4 years of experience crafting modern web applications. 
-                Specialized in building scalable, user-centric solutions that drive business growth.
+                With over 4 years of experience, I craft scalable web applications with a focus on backend development. Passionate about programming and continuous learning, I’ve contributed to open-source projects like WordPress 6.4, driving innovation through high-quality code.
               </p>
             </div>
 
