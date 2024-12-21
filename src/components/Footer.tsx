@@ -1,5 +1,6 @@
-import { EMAIL_ID, GITHUB_URL, LINKEDIN_URL } from '../constants/social';
-import { Github, Linkedin, Mail } from 'lucide-react';
+import React from 'react';
+import { Github, Linkedin, Mail, MessageCircle } from 'lucide-react';
+import { GITHUB_URL, LINKEDIN_URL, WHATSAPP_URL, EMAIL_URL } from '../constants/social';
 
 export default function Footer() {
   return (
@@ -29,7 +30,15 @@ export default function Footer() {
               <Linkedin size={24} />
             </a>
             <a
-              href={`mailto:${EMAIL_ID}`}
+              href={WHATSAPP_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-blue-400 transition"
+            >
+              <MessageCircle size={24} />
+            </a>
+            <a
+              href={EMAIL_URL}
               className="hover:text-blue-400 transition"
             >
               <Mail size={24} />

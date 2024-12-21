@@ -1,5 +1,5 @@
-import { EMAIL_ID, GITHUB_URL, LINKEDIN_URL } from '../constants/social';
-import { MessageSquare, Mail, Github, Linkedin, MapPin, File } from 'lucide-react';
+import { MessageSquare, Mail, Github, Linkedin, MessageCircle, Download, MapPin } from 'lucide-react';
+import { GITHUB_URL, LINKEDIN_URL, WHATSAPP_URL, EMAIL_URL } from '../constants/social';
 
 export default function Contact() {
   return (
@@ -10,7 +10,7 @@ export default function Contact() {
           <h2 className="text-3xl font-bold text-gray-800">Let's Connect</h2>
         </div>
         
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-4xl mx-auto">
           <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
             <div className="grid md:grid-cols-2">
               <div className="bg-gradient-to-br from-blue-600 to-blue-700 p-12 text-white">
@@ -46,7 +46,15 @@ export default function Contact() {
                       <Linkedin size={20} />
                     </a>
                     <a
-                      href={`mailto:${EMAIL_ID}`}
+                      href={WHATSAPP_URL}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="p-2 bg-white/10 rounded-full hover:bg-white/20 transition-colors"
+                    >
+                      <MessageCircle size={20} />
+                    </a>
+                    <a
+                      href={EMAIL_URL}
                       className="p-2 bg-white/10 rounded-full hover:bg-white/20 transition-colors"
                     >
                       <Mail size={20} />
@@ -66,14 +74,12 @@ export default function Contact() {
                       <span className="text-blue-600 font-medium">Open to Collaboration</span>
                     </div>
                     <a
-                        href={`../../assets/resume.pdf`}
-                        download={true}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="w-full py-3 px-6 text-center bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors flex items-center justify-center gap-2"
+                      href="/resume/resume.pdf"
+                      download
+                      className="flex items-center justify-center gap-2 w-full py-3 px-6 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
                     >
-                      <File size={20} />
-                      <span>Download Resume</span>
+                      <Download size={20} />
+                      Download Resume
                     </a>
                   </div>
                 </div>
