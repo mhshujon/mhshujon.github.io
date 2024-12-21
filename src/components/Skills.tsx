@@ -7,11 +7,11 @@ const skills = {
   },
   "Backend": {
     icon: Server,
-    skills: ["Node.js", "Express", "GraphQL", "REST APIs"]
+    skills: ["PHP", "Python","Node.js", "Express", "GraphQL", "REST APIs"]
   },
   "Database": {
     icon: Database,
-    skills: ["PostgreSQL", "MongoDB", "Redis"]
+    skills: ["MySQL", "MongoDB", "Redis"]
   },
   "Cloud & DevOps": {
     icon: Cloud,
@@ -19,7 +19,7 @@ const skills = {
   },
   "Tools & Methods": {
     icon: Wrench,
-    skills: ["Git", "Agile", "TDD", "Microservices"]
+    skills: ["Git", "SVN", "Agile", "TDD", "Microservices"]
   }
 };
 

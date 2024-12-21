@@ -10,7 +10,7 @@ export default function Contact() {
           <h2 className="text-3xl font-bold text-gray-800">Let's Connect</h2>
         </div>
         
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-6xl mx-auto">
           <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
             <div className="grid md:grid-cols-2">
               <div className="bg-gradient-to-br from-blue-600 to-blue-700 p-12 text-white">
