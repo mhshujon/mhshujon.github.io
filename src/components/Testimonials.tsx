@@ -1,7 +1,7 @@
 import {useEffect, useState} from 'react';
 import {Quote, ArrowLeft, ArrowRight} from 'lucide-react';
 import {testimonials} from '../data/testimonials';
-import {iconMap} from '../constants/iconmap';
+import {iconMap} from '../constants/iconMap';
 
 export default function Testimonials() {
     const [currentIndex, setCurrentIndex] = useState(0);
