@@ -3,7 +3,7 @@ import { GITHUB_URL, LINKEDIN_URL, WHATSAPP_URL, EMAIL_URL } from '../constants/
 
 export default function Contact() {
   return (
-    <section id="contact" className="py-20 bg-gray-50">
+    <section id="contact" className="py-20">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-center gap-2 mb-12">
           <MessageSquare className="text-blue-600" size={28} />

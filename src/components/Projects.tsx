@@ -46,7 +46,7 @@ export default function Projects() {
           {projects.map((project, index) => (
             <div
               key={index}
-              className="group bg-white p-8 rounded-xl border-2 border-gray-100 hover:border-blue-500 transition-all duration-300"
+              className="group bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300"
             >
               <div className="flex flex-col h-full">
                 <h3 className="text-2xl font-bold text-gray-800 mb-4 group-hover:text-blue-600 transition-colors">

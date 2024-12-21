@@ -25,7 +25,7 @@ const skills = {
 
 export default function Skills() {
   return (
-      <section id="skills" className="py-20 bg-gray-50">
+      <section id="skills" className="py-20">
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-center gap-2 mb-12">
             <Code className="text-blue-600" size={28} />
@@ -36,7 +36,7 @@ export default function Skills() {
             {Object.entries(skills).map(([category, { icon: Icon, skills: categorySkills }]) => (
                 <div
                     key={category}
-                    className="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow"
+                    className="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow"
                 >
                   <div className="flex items-center gap-2 mb-4 pb-2 border-b border-gray-100">
                     <Icon className="text-blue-600" size={20} />

@@ -29,7 +29,7 @@ const experiences = [
 
 export default function Experience() {
   return (
-    <section id="experience" className="py-20">
+    <section id="experience" className="py-20 bg-gray-50">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-center gap-2 mb-12">
           <Briefcase className="text-blue-600" size={28} />

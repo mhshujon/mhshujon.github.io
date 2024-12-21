@@ -31,19 +31,19 @@ export default function Hero() {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4 animate-fade-in justify-center lg:justify-start">
-              <a 
-                href="#contact" 
-                className="inline-flex items-center justify-center gap-2 bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition group"
+              <span
+                  onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+                  className="inline-flex items-center justify-center gap-2 bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition group cursor-pointer"
               >
                 Get in Touch
                 <ArrowRight className="group-hover:translate-x-1 transition-transform" size={20} />
-              </a>
-              <a 
-                href="#projects" 
-                className="inline-flex items-center justify-center border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-50 transition"
+              </span>
+              <span
+                  onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
+                  className="inline-flex items-center justify-center border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-50 transition cursor-pointer"
               >
                 View Projects
-              </a>
+              </span>
             </div>
 
             <div className="flex gap-6 pt-4 pb-8 justify-center lg:justify-start">
