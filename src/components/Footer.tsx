@@ -1,5 +1,5 @@
-import { Github, Linkedin, Mail, MessageCircle, MapPin } from 'lucide-react';
-import { GITHUB_URL, LINKEDIN_URL, WHATSAPP_URL, EMAIL_URL } from '../constants/social';
+import {MapPin} from 'lucide-react';
+import SocialIcons from "./SocialIcons.tsx";
 
 export default function Footer() {
   return (
@@ -16,36 +16,7 @@ export default function Footer() {
             </div>
 
             <div className="flex gap-6">
-              <a
-                  href={GITHUB_URL}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-blue-400 transition"
-              >
-                <Github size={24} />
-              </a>
-              <a
-                  href={LINKEDIN_URL}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-blue-400 transition"
-              >
-                <Linkedin size={24} />
-              </a>
-              <a
-                  href={WHATSAPP_URL}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-blue-400 transition"
-              >
-                <MessageCircle size={24} />
-              </a>
-              <a
-                  href={EMAIL_URL}
-                  className="hover:text-blue-400 transition"
-              >
-                <Mail size={24} />
-              </a>
+              <SocialIcons iconSize={24}/>
             </div>
           </div>
 

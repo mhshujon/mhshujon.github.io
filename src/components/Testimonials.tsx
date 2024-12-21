@@ -1,66 +1,7 @@
-import { useEffect, useState } from 'react';
-import {Quote, ArrowLeft, ArrowRight, Linkedin, Github, Twitter, LucideIcon} from 'lucide-react';
-
-type Testimonial = {
-    id: number;
-    name: string;
-    role: string;
-    company: string;
-    image: string;
-    review: string;
-    social: {
-        linkedin?: string;
-        github?: string;
-        twitter?: string;
-    };
-};
-
-const iconMap: Record<string, { component: LucideIcon; color: string }> = {
-    linkedin: { component: Linkedin, color: "hover:text-blue-600" },
-    github: { component: Github, color: "hover:text-gray-600" },
-    twitter: { component: Twitter, color: "hover:text-blue-400" },
-};
-
-
-const testimonials: Testimonial[] = [
-    {
-        id: 1,
-        name: "Sarah Johnson",
-        role: "Engineering Manager",
-        company: "Tech Solutions Inc",
-        image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80",
-        review: "One of the most dedicated developers I've worked with. Their attention to detail and problem-solving skills are exceptional.",
-        social: {
-            linkedin: "https://linkedin.com",
-            github: "https://github.com",
-            twitter: "https://twitter.com"
-        }
-    },
-    {
-        id: 2,
-        name: "Michael Chen",
-        role: "Senior Software Architect",
-        company: "Innovation Labs",
-        image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80",
-        review: "An exceptional team player with strong technical skills. They consistently deliver high-quality code and mentor others effectively.",
-        social: {
-            linkedin: "https://linkedin.com",
-            github: "https://github.com"
-        }
-    },
-    {
-        id: 3,
-        name: "Emily Rodriguez",
-        role: "Product Manager",
-        company: "Digital Ventures",
-        image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&q=80",
-        review: "Their technical expertise combined with business understanding makes them an invaluable asset to any project.",
-        social: {
-            linkedin: "https://linkedin.com",
-            twitter: "https://twitter.com"
-        }
-    }
-];
+import {useEffect, useState} from 'react';
+import {Quote, ArrowLeft, ArrowRight} from 'lucide-react';
+import {testimonials} from '../data/testimonials';
+import {iconMap} from '../constants/iconmap';
 
 export default function Testimonials() {
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -88,7 +29,7 @@ export default function Testimonials() {
         <section className="py-20 bg-gray-50">
             <div className="container mx-auto px-4">
                 <div className="flex items-center justify-center gap-2 mb-12">
-                    <Quote className="text-blue-600" size={28} />
+                    <Quote className="text-blue-600" size={28}/>
                     <h2 className="text-3xl font-bold text-gray-800">What People Say</h2>
                 </div>
 
@@ -127,7 +68,7 @@ export default function Testimonials() {
                                                 <div className="flex gap-4 justify-center md:justify-start">
                                                     {Object.entries(testimonial.social).map(([platform, url]) => {
                                                         const Icon = iconMap[platform]?.component; // Get the icon component dynamically
-                                                        const color = iconMap[platform]?.color || "hover:transition-colors"; // Default if no color is defined
+                                                        const hoverColor = iconMap[platform]?.color || "hover:transition-colors"; // Default if no color is defined
                                                         return (
                                                             Icon && (
                                                                 <a
@@ -135,9 +76,9 @@ export default function Testimonials() {
                                                                     href={url}
                                                                     target="_blank"
                                                                     rel="noopener noreferrer"
-                                                                    className={`text-gray-400 ${color} transition-colors`}
+                                                                    className={`text-gray-400 ${hoverColor} transition-colors`}
                                                                 >
-                                                                    <Icon size={20} />
+                                                                    <Icon size={20}/>
                                                                 </a>
                                                             )
                                                         );
@@ -158,7 +99,7 @@ export default function Testimonials() {
                         onMouseEnter={() => setIsPaused(true)}
                         onMouseLeave={() => setIsPaused(false)}
                     >
-                        <ArrowLeft size={24} />
+                        <ArrowLeft size={24}/>
                     </button>
                     <button
                         onClick={handleNext}
@@ -167,7 +108,7 @@ export default function Testimonials() {
                         onMouseEnter={() => setIsPaused(true)}
                         onMouseLeave={() => setIsPaused(false)}
                     >
-                        <ArrowRight size={24} />
+                        <ArrowRight size={24}/>
                     </button>
                 </div>
             </div>
