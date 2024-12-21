@@ -1,5 +1,3 @@
-Sure, here is a `README.md` file for setting up your project:
-
 # Web Application Engineer Portfolio
 
 This is a personal portfolio project showcasing the skills and projects of a Web Application Engineer.
