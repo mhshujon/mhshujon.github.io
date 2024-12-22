@@ -51,7 +51,7 @@ export default function Testimonials() {
                                     key={testimonial?.id}
                                     className="w-full px-4 pb-2"
                                 >
-                                    <div className="bg-white rounded-xl p-8 shadow-sm hover:shadow-md">
+                                    <div className="bg-white rounded-xl p-8 shadow-sm hover:shadow-md transition-all hover:-translate-y-1">
                                         <div className="flex flex-col md:flex-row gap-8 items-center">
                                             <div className="flex-shrink-0">
                                                 <img

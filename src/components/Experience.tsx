@@ -21,7 +21,7 @@ export default function Experience() {
                                         <div className="w-3 h-3 bg-white rounded-full"></div>
                                     </div>
                                     <div
-                                        className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                                        className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-all hover:-translate-y-1">
                                         <div className="flex flex-wrap items-center justify-between gap-4 mb-4">
                                             <div>
                                                 <h3 className="text-xl font-bold text-gray-800">{exp?.title}</h3>

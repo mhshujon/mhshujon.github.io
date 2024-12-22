@@ -21,7 +21,7 @@ export const testimonials: Testimonial[] = [
         role: "Engineering Manager",
         company: "Code Rex",
         companyUrl: "https://coderex.co",
-        companyLogo: "/logo/coderex.svg",
+        companyLogo: "/assets/logo/coderex.svg",
         image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80",
         review: "One of the most dedicated developers I've worked with. Their attention to detail and problem-solving skills are exceptional.",
         social: {
@@ -36,7 +36,7 @@ export const testimonials: Testimonial[] = [
         role: "Senior Software Architect",
         company: "Code Rex",
         companyUrl: "https://coderex.co",
-        companyLogo: "/logo/coderex.svg",
+        companyLogo: "/assets/logo/coderex.svg",
         image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80",
         review: "An exceptional team player with strong technical skills. They consistently deliver high-quality code and mentor others effectively.",
         social: {
@@ -50,7 +50,7 @@ export const testimonials: Testimonial[] = [
         role: "Product Manager",
         company: "Code Rex",
         companyUrl: "https://coderex.co",
-        companyLogo: "/logo/coderex.svg",
+        companyLogo: "/assets/logo/coderex.svg",
         image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&q=80",
         review: "Their technical expertise combined with business understanding makes them an invaluable asset to any project.",
         social: {
