@@ -18,12 +18,12 @@ export default function Projects() {
             >
               <div className="flex flex-col h-full">
                 <h3 className="text-2xl font-bold text-gray-800 mb-4 group-hover:text-blue-600 transition-colors">
-                  {project.title}
+                  {project?.title}
                 </h3>
-                <p className="text-gray-600 mb-6 flex-grow">{project.description}</p>
+                <p className="text-gray-600 mb-6 flex-grow">{project?.description}</p>
                 <div className="space-y-4">
                   <div className="flex flex-wrap gap-2">
-                    {project.tech.map((tech, techIndex) => (
+                    {project?.tech.map((tech, techIndex) => (
                       <span
                         key={techIndex}
                         className="px-3 py-1 bg-blue-50 text-blue-600 rounded-full text-sm"
@@ -33,7 +33,7 @@ export default function Projects() {
                     ))}
                   </div>
                   <a
-                    href={project.link}
+                    href={project?.link}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-700 transition-colors"

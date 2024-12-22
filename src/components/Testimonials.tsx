@@ -8,11 +8,11 @@ export default function Testimonials() {
     const [isPaused, setIsPaused] = useState(false);
 
     const handlePrevious = () => {
-        setCurrentIndex((prev) => (prev === 0 ? testimonials.length - 1 : prev - 1));
+        setCurrentIndex((prev) => (prev === 0 ? testimonials?.length - 1 : prev - 1));
     };
 
     const handleNext = () => {
-        setCurrentIndex((prev) => (prev === testimonials.length - 1 ? 0 : prev + 1));
+        setCurrentIndex((prev) => (prev === testimonials?.length - 1 ? 0 : prev + 1));
     };
 
     useEffect(() => {
@@ -42,33 +42,42 @@ export default function Testimonials() {
                         <div
                             className="flex transition-transform duration-500"
                             style={{
-                                width: `${testimonials.length * 100}%`,
-                                transform: `translateX(-${(currentIndex * 100) / testimonials.length}%)`,
+                                width: `${testimonials?.length * 100}%`,
+                                transform: `translateX(-${(currentIndex * 100) / testimonials?.length}%)`,
                             }}
                         >
                             {testimonials.map((testimonial) => (
                                 <div
-                                    key={testimonial.id}
+                                    key={testimonial?.id}
                                     className="w-full px-4 pb-2"
                                 >
                                     <div className="bg-white rounded-xl p-8 shadow-sm hover:shadow-md">
                                         <div className="flex flex-col md:flex-row gap-8 items-center">
                                             <div className="flex-shrink-0">
                                                 <img
-                                                    src={testimonial.image}
-                                                    alt={testimonial.name}
+                                                    src={testimonial?.image}
+                                                    alt={testimonial?.name}
                                                     className="w-24 h-24 rounded-full object-cover"
                                                 />
                                             </div>
                                             <div className="flex-grow text-center md:text-left">
-                                                <p className="text-gray-600 italic mb-4">"{testimonial.review}"</p>
-                                                <h3 className="text-xl font-semibold text-gray-800">{testimonial.name}</h3>
-                                                <p className="text-blue-600">{testimonial.role}</p>
-                                                <p className="text-gray-500 mb-4">{testimonial.company}</p>
+                                                <p className="text-gray-600 italic mb-4">"{testimonial?.review}"</p>
+                                                <h3 className="text-xl font-semibold text-gray-800">{testimonial?.name}</h3>
+                                                <p className="text-blue-600">{testimonial?.role}</p>
+                                                <a href={testimonial?.companyUrl} target={`_blank`} className="flex items-center gap-2 text-gray-500 mb-4 hover:text-gray-600 font-medium">
+                                                    {testimonial?.companyLogo && (
+                                                        <img
+                                                            src={testimonial?.companyLogo}
+                                                            alt={`${testimonial?.company} logo`}
+                                                            className="h-5 w-auto"
+                                                        />
+                                                    )}
+                                                    <span>{testimonial?.company}</span>
+                                                </a>
                                                 <div className="flex gap-4 justify-center md:justify-start">
-                                                    {Object.entries(testimonial.social).map(([platform, url]) => {
-                                                        const Icon = iconMap[platform]?.component; // Get the icon component dynamically
-                                                        const hoverColor = iconMap[platform]?.color || "hover:transition-colors"; // Default if no color is defined
+                                                    {Object.entries(testimonial?.social).map(([platform, url]) => {
+                                                        const Icon = iconMap[platform]?.component;
+                                                        const hoverColor = iconMap[platform]?.color || "hover:transition-colors";
                                                         return (
                                                             Icon && (
                                                                 <a

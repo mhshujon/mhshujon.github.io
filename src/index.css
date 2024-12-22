@@ -51,6 +51,11 @@ html {
   scroll-behavior: smooth;
 }
 
+a:focus {
+  outline: none;
+  box-shadow: none;
+}
+
 /* Better focus styles */
 *:focus {
   outline: none;
