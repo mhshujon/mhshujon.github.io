@@ -1,13 +1,11 @@
-import { useState, FormEvent, useRef } from 'react';
+import { useState, FormEvent } from 'react';
 import emailjs from '@emailjs/browser';
 import { toast } from 'react-hot-toast';
 import { Send } from 'lucide-react';
-import ReCAPTCHA from 'react-google-recaptcha';
 import { useHoneypot } from '../../hooks/useHoneypot';
 import { env } from '../../config/env';
 
 export default function ContactForm() {
-    const recaptchaRef = useRef<ReCAPTCHA>(null);
     const { honeypotField, isBot } = useHoneypot();
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [formData, setFormData] = useState({
@@ -20,13 +18,6 @@ export default function ContactForm() {
         e.preventDefault();
 
         if (isBot) {
-            console.log('Bot detected');
-            return;
-        }
-
-        const recaptchaValue = recaptchaRef.current?.getValue();
-        if (!recaptchaValue) {
-            toast.error('Please verify that you are human');
             return;
         }
 
@@ -40,14 +31,12 @@ export default function ContactForm() {
                     from_name: formData.name,
                     from_email: formData.email,
                     message: formData.message,
-                    'g-recaptcha-response': recaptchaValue,
                 },
                 env.emailjs.publicKey
             );
 
             toast.success('Message sent successfully!');
             setFormData({ name: '', email: '', message: '' });
-            recaptchaRef.current?.reset();
         } catch (error) {
             toast.error('Failed to send message. Please try again.');
             console.error('Email send error:', error);
@@ -101,14 +90,6 @@ export default function ContactForm() {
                         className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                         value={formData.message}
                         onChange={(e) => setFormData(prev => ({ ...prev, message: e.target.value }))}
-                    />
-                </div>
-
-                <div className="flex justify-center">
-                    <ReCAPTCHA
-                        ref={recaptchaRef}
-                        sitekey={env.recaptcha.siteKey}
-                        theme="light"
                     />
                 </div>
 
