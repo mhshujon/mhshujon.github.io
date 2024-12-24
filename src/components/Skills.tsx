@@ -14,7 +14,7 @@ export default function Skills() {
             {Object.entries(skills).map(([category, { icon: Icon, skills: categorySkills }]) => (
                 <div
                     key={category}
-                    className="group bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-all hover:-translate-y-1"
+                    className="group bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-all"
                 >
                   <div className="flex items-center gap-2 mb-4 pb-2 border-b border-gray-100">
                     <Icon className="text-blue-600" size={20} />
