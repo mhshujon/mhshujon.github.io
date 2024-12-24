@@ -7,11 +7,11 @@ export const skills = {
     },
     "Backend": {
         icon: Server,
-        skills: ["PHP", "Python","Node.js", "Express", "GraphQL", "REST APIs"]
+        skills: ["PHP", "Python","Node.js", "Express.js", "GraphQL", "REST APIs"]
     },
     "Database": {
         icon: Database,
-        skills: ["MySQL", "MongoDB", "Redis"]
+        skills: ["MySQL", "PostgreSQL", "MongoDB", "Redis"]
     },
     "Cloud & DevOps": {
         icon: Cloud,
