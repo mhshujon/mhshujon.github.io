@@ -51,7 +51,8 @@ html {
   scroll-behavior: smooth;
 }
 
-a:focus {
+a:focus,
+button:focus {
   outline: none;
   box-shadow: none;
 }
