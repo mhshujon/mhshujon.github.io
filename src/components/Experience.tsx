@@ -12,26 +12,26 @@ export default function Experience() {
             <div className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow">
                 <div className="flex flex-wrap items-center justify-between gap-4 mb-4">
                     <div>
-                        <h3 className="text-xl font-bold text-gray-800">{exp.title}</h3>
-                        <a href={exp.companyUrl} target="_blank" rel="noopener noreferrer"
+                        <h3 className="text-xl font-bold text-gray-800">{exp?.title}</h3>
+                        <a href={exp?.companyUrl} target="_blank" rel="noopener noreferrer"
                            className="flex items-center gap-2 text-blue-600 hover:text-blue-700">
-                            {exp.companyLogo && (
+                            {exp?.companyLogo && (
                                 <img
-                                    src={exp.companyLogo}
-                                    alt={`${exp.company} logo`}
+                                    src={exp?.companyLogo}
+                                    alt={`${exp?.company} logo`}
                                     className="h-6 w-auto"
                                 />
                             )}
-                            <span>{exp.company}</span>
+                            <span>{exp?.company}</span>
                         </a>
                     </div>
                     <span className="px-4 py-1 bg-blue-50 text-blue-600 rounded-full text-sm">
-                        {exp.period}
+                        {exp?.period}
                     </span>
                 </div>
-                <TruncatedText text={exp.description} />
+                <TruncatedText text={exp?.description} />
                 <div className="flex flex-wrap gap-2 mt-4">
-                    {exp.highlights.map((highlight, i) => (
+                    {exp?.highlights.map((highlight, i) => (
                         <span key={i}
                               className="px-3 py-1 bg-blue-50 text-gray-600 rounded-full text-sm">
                             {highlight}
@@ -52,11 +52,12 @@ export default function Experience() {
 
                 <div className="max-w-6xl mx-auto">
                     <div className="relative">
-                        <div className="absolute left-4 top-0 bottom-0 w-0.5 bg-blue-100"></div>
+                        {/* Timeline line that stops at content */}
+                        <div className="absolute left-4 top-0 bottom-0 w-0.5 bg-blue-100" />
                         <ExpandableSection
                             items={experienceItems}
                             title="Experience"
-                            initialCount={2}
+                            initialCount={3}
                         />
                     </div>
                 </div>

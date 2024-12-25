@@ -2,13 +2,49 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  /* Improved typography */
+  h1 { @apply text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight; }
+  h2 { @apply text-3xl md:text-4xl font-bold tracking-tight; }
+  h3 { @apply text-2xl font-semibold; }
+
+  /* Smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+    @apply antialiased;
+  }
+}
+
+@layer components {
+  /* Container styles */
+  .container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  /* Section styles */
+  .section-padding {
+    @apply py-16 md:py-24;
+  }
+
+  /* Card styles */
+  .card {
+    @apply bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-300;
+  }
+}
+
+@layer utilities {
+  .line-clamp-2 {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+  }
+}
+
+/* Animations */
 @keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
 @keyframes slideUp {
@@ -23,49 +59,26 @@
 }
 
 @keyframes float {
-  0% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-20px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+  100% { transform: translateY(0px); }
 }
 
-.animate-fade-in {
-  animation: fadeIn 1s ease-out;
+.animate-fade-in { animation: fadeIn 1s ease-out; }
+.animate-slide-up { animation: slideUp 1s ease-out; }
+.animate-float { animation: float 6s ease-in-out infinite; }
+
+/* Focus styles */
+*:focus {
+  @apply outline-none ring-2 ring-blue-500 ring-offset-2;
 }
 
-.animate-slide-up {
-  animation: slideUp 1s ease-out;
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .container { @apply px-4; }
 }
 
-.animate-float {
-  animation: float 6s ease-in-out infinite;
-}
-
-/* Smooth scrolling */
-html {
-  scroll-behavior: smooth;
-}
-
-a:focus,
-button:focus {
+a:focus, button:focus {
   outline: none;
   box-shadow: none;
-}
-
-/* Better focus styles */
-*:focus {
-  outline: none;
-  @apply ring-2 ring-blue-500 ring-offset-2;
-}
-
-/* Mobile optimizations */
-@media (max-width: 768px) {
-  .container {
-    @apply px-4;
-  }
 }

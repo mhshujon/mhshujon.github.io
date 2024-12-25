@@ -17,7 +17,7 @@ export default function TruncatedText({ text, maxLines = 2 }: TruncatedTextProps
             if (!element) return;
 
             // Get line height and total height
-            const lineHeight = parseInt(window.getComputedStyle(element).lineHeight);
+            const lineHeight = parseFloat(window.getComputedStyle(element).lineHeight);
             const maxHeight = lineHeight * maxLines;
 
             // Check if content exceeds max height
