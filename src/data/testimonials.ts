@@ -30,7 +30,7 @@ export const testimonials: Testimonial[] = [
             linkedin: "https://www.linkedin.com/in/c-s-sultan-royal/",
             twitter: "https://twitter.com/SultanRoyal1",
             facebook: "https://www.facebook.com/sultan.royal",
-            email: "sultan@coderex.co",
+            email: "mailto:sultan@coderex.co",
         }
     },
     {
@@ -46,7 +46,7 @@ export const testimonials: Testimonial[] = [
             linkedin: "https://www.linkedin.com/in/shahab-uddin-mahi-7a9704117/",
             twitter: "https://twitter.com/Sk_Md_MaHi",
             facebook: "https://www.facebook.com/md.skmahi",
-            email: "mahi@coderex.co",
+            email: "mailto:mahi@coderex.co",
         }
     },
 ];
