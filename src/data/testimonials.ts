@@ -12,6 +12,7 @@ type Testimonial = {
         github?: string;
         twitter?: string;
         facebook?: string;
+        email?: string;
     };
 };
 
@@ -29,6 +30,7 @@ export const testimonials: Testimonial[] = [
             linkedin: "https://www.linkedin.com/in/c-s-sultan-royal/",
             twitter: "https://twitter.com/SultanRoyal1",
             facebook: "https://www.facebook.com/sultan.royal",
+            email: "sultan@coderex.co",
         }
     },
     {
@@ -44,6 +46,7 @@ export const testimonials: Testimonial[] = [
             linkedin: "https://www.linkedin.com/in/c-s-sultan-royal/",
             twitter: "https://twitter.com/SultanRoyal1",
             facebook: "https://www.facebook.com/sultan.royal",
+            email: "sultan@coderex.co",
         }
     },
 ];
