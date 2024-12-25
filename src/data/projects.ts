@@ -12,12 +12,6 @@ export const projects = [
         link: "https://wordpress.org/plugins/mail-mint"
     },
     {
-        title: "WP VR – 360° Panorama and Free Virtual Tour Builder For WordPress",
-        description: "A virtual tour builder for WordPress that allows users to create interactive 360° panoramic views with hotspots, scene transitions, floor planning, and many more exciting features. It's perfect for showcasing properties, shops, or exhibitions online.",
-        tech: ["PHP", "JavaScript", "TypeScript", "REST API", "WooCommerce", "Divi", "Astra", "Kadence", "Blocksy", "Elementor", "Gutenberg", "Beaver Builder"],
-        link: "https://wordpress.org/plugins/wpvr"
-    },
-    {
         title: "Checkoutify – WooCommerce Checkout Customizer",
         description: "A powerful WordPress plugin to customize WooCommerce checkout with a drag-and-drop editor. Features include multi-step checkout, field management, order bumps, and payment gateway support, optimizing the checkout process to boost sales.",
         tech: ["PHP", "Vue", "JavaScript", "SASS", "REST API", "Stripe", "WooCommerce", "Divi", "Astra", "Elementor", "Gutenberg", "WooCommerce Blocks"],

@@ -7,7 +7,7 @@ type ExpandableSectionProps = {
     title: string;
 };
 
-export default function ExpandableSection({ items, initialCount = 3, title }: ExpandableSectionProps) {
+export default function ExpandableSection({ items, initialCount = 2, title }: ExpandableSectionProps) {
     const [isExpanded, setIsExpanded] = useState(false);
     const hasMore = items?.length > initialCount;
     const displayedItems = isExpanded ? items : items.slice(0, initialCount);
