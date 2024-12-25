@@ -12,6 +12,7 @@ export default function Hero() {
                     src="/assets/hero-bg.webp"
                     alt="Hero background"
                     className="w-full h-full object-cover opacity-10"
+                    loading={`eager`}
                 />
             </div>
 
@@ -68,6 +69,7 @@ export default function Hero() {
                                     src="/assets/hero-profile-img.webp"
                                     alt="Profile"
                                     className="w-full h-full object-cover rounded-full shadow-lg"
+                                    loading={`eager`}
                                 />
                             </div>
                         </div>

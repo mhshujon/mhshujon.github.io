@@ -20,6 +20,7 @@ export default function Experience() {
                                     src={exp?.companyLogo}
                                     alt={`${exp?.company} logo`}
                                     className="h-6 w-auto"
+                                    loading={`lazy`}
                                 />
                             )}
                             <span>{exp?.company}</span>

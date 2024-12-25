@@ -58,6 +58,7 @@ export default function Testimonials() {
                                                     src={testimonial?.image}
                                                     alt={testimonial?.name}
                                                     className="w-24 h-24 rounded-full object-cover"
+                                                    loading={`lazy`}
                                                 />
                                             </div>
                                             <div className="flex-grow text-center md:text-left">
@@ -70,6 +71,7 @@ export default function Testimonials() {
                                                             src={testimonial?.companyLogo}
                                                             alt={`${testimonial?.company} logo`}
                                                             className="h-5 w-auto"
+                                                            loading={`lazy`}
                                                         />
                                                     )}
                                                     <span>{testimonial?.company}</span>
