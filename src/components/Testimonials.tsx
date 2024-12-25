@@ -63,7 +63,7 @@ export default function Testimonials() {
                                             <div className="flex-grow text-center md:text-left">
                                                 <p className="text-gray-600 italic mb-4">"{testimonial?.review}"</p>
                                                 <h3 className="text-xl font-semibold text-gray-800">{testimonial?.name}</h3>
-                                                <p className="text-blue-600">{testimonial?.role}</p>
+                                                <p className="text-blue-600 font-medium">{testimonial?.role}</p>
                                                 <a href={testimonial?.companyUrl} target={`_blank`} className="flex items-center gap-2 text-gray-500 mb-4 hover:text-gray-600 font-medium">
                                                     {testimonial?.companyLogo && (
                                                         <img

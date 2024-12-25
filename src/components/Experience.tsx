@@ -14,7 +14,7 @@ export default function Experience() {
                     <div>
                         <h3 className="text-xl font-bold text-gray-800">{exp?.title}</h3>
                         <a href={exp?.companyUrl} target="_blank" rel="noopener noreferrer"
-                           className="flex items-center gap-2 text-blue-600 hover:text-blue-700">
+                           className="flex items-center gap-2 text-blue-600 hover:text-blue-700 font-medium">
                             {exp?.companyLogo && (
                                 <img
                                     src={exp?.companyLogo}

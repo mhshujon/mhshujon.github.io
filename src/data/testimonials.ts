@@ -22,8 +22,8 @@ export const testimonials: Testimonial[] = [
         role: "Business Development Manager",
         company: "Code Rex",
         companyUrl: "https://coderex.co",
-        companyLogo: "/assets/logo/coderex.svg",
-        image: "/assets/testimonials/cssultan.jpg",
+        companyLogo: "/assets/logo/coderex.webp",
+        image: "/assets/testimonials/cssultan.webp",
         review: "He has been an amazing person to work with, always dedicated to solving any problems with precision. He has a concrete knowledge in programming and OOP, while also being an expert PHP developer. On top of these, he is a great ethical human being. A great individual and a gem for any team.",
         social: {
             linkedin: "https://www.linkedin.com/in/c-s-sultan-royal/",
@@ -37,8 +37,8 @@ export const testimonials: Testimonial[] = [
         role: "Business Development Manager",
         company: "Code Rex",
         companyUrl: "https://coderex.co",
-        companyLogo: "/assets/logo/coderex.svg",
-        image: "/assets/testimonials/cssultan.jpg",
+        companyLogo: "/assets/logo/coderex.webp",
+        image: "/assets/testimonials/cssultan.webp",
         review: "He has been an amazing person to work with, always dedicated to solving any problems with precision. He has a concrete knowledge in programming and OOP, while also being an expert PHP developer. On top of these, he is a great ethical human being. A great individual and a gem for any team.",
         social: {
             linkedin: "https://www.linkedin.com/in/c-s-sultan-royal/",

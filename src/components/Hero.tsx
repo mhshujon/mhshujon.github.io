@@ -9,7 +9,7 @@ export default function Hero() {
             <div className="absolute inset-0 z-0">
                 <div className="absolute inset-0 bg-gradient-to-br from-blue-50 to-white opacity-90"/>
                 <img
-                    src="/assets/hero-bg.jpeg"
+                    src="/assets/hero-bg.webp"
                     alt="Hero background"
                     className="w-full h-full object-cover opacity-10"
                 />
@@ -65,7 +65,7 @@ export default function Hero() {
                             <div className="absolute inset-0 bg-blue-600 rounded-full blur-3xl opacity-20 animate-pulse"/>
                             <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full bg-gradient-to-br from-blue-100 to-white animate-float">
                                 <img
-                                    src="/assets/hero-profile-img.jpeg"
+                                    src="/assets/hero-profile-img.webp"
                                     alt="Profile"
                                     className="w-full h-full object-cover rounded-full shadow-lg"
                                 />
