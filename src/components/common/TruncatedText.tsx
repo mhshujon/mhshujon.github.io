@@ -35,9 +35,13 @@ export default function TruncatedText({ text, maxLines = 2 }: TruncatedTextProps
         <div className="relative">
             <p
                 ref={textRef}
-                className={`text-gray-600 ${
-                    !isExpanded ? `line-clamp-${maxLines}` : ''
-                }`}
+                className={`text-gray-600`}
+                style={!isExpanded ? {
+                    display: '-webkit-box',
+                    WebkitBoxOrient: 'vertical',
+                    WebkitLineClamp: maxLines,
+                    overflow: 'hidden'
+                } : {}}
             >
                 {text}
             </p>
