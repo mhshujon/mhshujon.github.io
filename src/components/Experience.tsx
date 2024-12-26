@@ -4,8 +4,8 @@ import ExpandableSection from './common/ExpandableSection';
 import TruncatedText from './common/TruncatedText';
 
 export default function Experience() {
-    const experienceItems = experiences.map((exp, index) => (
-        <div key={index} className="relative pl-12">
+    const experienceItems = experiences.map((exp, _index) => (
+        <div key={Math.floor(Math.random() * Math.random() * 10)} className="relative pl-12">
             <div className="absolute left-0 top-3 w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center">
                 <div className="w-3 h-3 bg-white rounded-full"></div>
             </div>

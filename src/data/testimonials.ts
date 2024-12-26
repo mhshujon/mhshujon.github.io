@@ -1,5 +1,4 @@
 type Testimonial = {
-    id: number;
     name: string;
     role: string;
     company: string;
@@ -18,7 +17,6 @@ type Testimonial = {
 
 export const testimonials: Testimonial[] = [
     {
-        id: 1,
         name: "C S Sultan",
         role: "Business Development Manager",
         company: "Code Rex",
@@ -34,7 +32,6 @@ export const testimonials: Testimonial[] = [
         }
     },
     {
-        id: 2,
         name: "Shahab Uddin",
         role: "Senior UI/UX Designer",
         company: "Code Rex",

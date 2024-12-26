@@ -46,9 +46,9 @@ export default function Testimonials() {
                                 transform: `translateX(-${(currentIndex * 100) / testimonials?.length}%)`,
                             }}
                         >
-                            {testimonials.map((testimonial) => (
+                            {testimonials.map((testimonial, index) => (
                                 <div
-                                    key={testimonial?.id}
+                                    key={index}
                                     className="w-full px-4 pb-2"
                                 >
                                     <div className="bg-white rounded-xl p-8 shadow-sm hover:shadow-md transition-all hover:-translate-y-1">
