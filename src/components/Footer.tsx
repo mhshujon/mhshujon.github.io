@@ -1,27 +1,33 @@
 import {MapPin} from 'lucide-react';
-import SocialIcons from "./SocialIcons.tsx";
+import SocialLinks from './footer/SocialLinks';
+import Navigation from './footer/Navigation';
+import Technologies from './footer/Technologies';
+import Copyright from './footer/Copyright';
 
 export default function Footer() {
     return (
         <footer className="bg-gray-900 text-white py-12">
             <div className="container mx-auto px-4">
-                <div className="flex flex-col md:flex-row justify-between items-center">
+                {/* Main Content */}
+                <div className="flex flex-col md:flex-row justify-between pb-8 border-b border-gray-800 ">
                     <div className="text-center md:text-left mb-6 md:mb-0">
-                        <h3 className="text-xl font-bold">MD MONIR HOSSAIN</h3>
-                        <p className="text-gray-400">Web Application Engineer</p>
-                        <div className="flex items-center gap-2 mt-2 text-gray-400">
-                            <MapPin size={16}/>
-                            <span>Dhaka, Bangladesh</span>
-                        </div>
+                        <SocialLinks />
                     </div>
-
                     <div className="flex gap-6">
-                        <SocialIcons iconSize={24}/>
+                        <Navigation />
+                    </div>
+                    <div className="flex gap-6">
+                        <Technologies />
                     </div>
                 </div>
 
-                <div className="mt-8 text-center text-gray-400 text-sm">
-                    <p>&copy; {new Date().getFullYear()} MHSHUJON. All rights reserved.</p>
+                {/* Bottom Bar */}
+                <div className="pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                    <div className="flex items-center gap-2 text-gray-400">
+                        <MapPin size={16} className="text-blue-400"/>
+                        <span>Dhaka, Bangladesh</span>
+                    </div>
+                    <Copyright />
                 </div>
             </div>
         </footer>

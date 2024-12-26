@@ -1,8 +1,9 @@
 import {ArrowRight} from 'lucide-react';
 import SocialIcons from "./SocialIcons.tsx";
+import {useScrollTo} from "../hooks/useScrollTo";
 
 export default function Hero() {
-    const scrollTo = (id: string) => document.getElementById(id)?.scrollIntoView({behavior: 'smooth'});
+    const scrollTo = useScrollTo();
 
     return (
         <div className="relative min-h-screen flex items-center justify-center py-20">
