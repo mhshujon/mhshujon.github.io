@@ -17,6 +17,21 @@ type Testimonial = {
 
 export const testimonials: Testimonial[] = [
     {
+        name: "Sadi Mohammad Zaman",
+        role: "Chief Technology Officer",
+        company: "Code Rex",
+        companyUrl: "https://coderex.co",
+        companyLogo: "/assets/logo/coderex.webp",
+        image: "/assets/testimonials/sadi.webp",
+        review: "Monir is a talented and passionate software professional. I worked with him for almost four years. He has been a great part of our team, showing amazing skills in R&D and solving problems calmly. He is kind-hearted, ethical, and a true team player. He's always ready to listen and learn, and loves sharing what he knows. Monir has a strong passion for clean, maintainable code, which reflects his commitment to quality. His ability to stay cool under pressure has been truly inspiring. Any team would be lucky to have him!",
+        social: {
+            github: "https://github.com/sadi22",
+            linkedin: "https://www.linkedin.com/in/sadimohammad/",
+            facebook: "https://www.facebook.com/sadi.mohammad.35",
+            email: "mailto:sadi@coderex.co",
+        }
+    },
+    {
         name: "C S Sultan",
         role: "Business Development Manager",
         company: "Code Rex",

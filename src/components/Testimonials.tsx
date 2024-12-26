@@ -2,6 +2,7 @@ import {useEffect, useState} from 'react';
 import {Quote, ArrowLeft, ArrowRight} from 'lucide-react';
 import {testimonials} from '../data/testimonials';
 import {iconMap} from '../constants/iconMap';
+import TruncatedText from "./common/TruncatedText.tsx";
 
 export default function Testimonials() {
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -62,7 +63,9 @@ export default function Testimonials() {
                                                 />
                                             </div>
                                             <div className="flex-grow text-center md:text-left">
-                                                <p className="text-gray-600 italic mb-4">"{testimonial?.review}"</p>
+                                                <p className="text-gray-600 italic mb-4">
+                                                    <TruncatedText text={`"${testimonial?.review}"`} maxLines={3}/>
+                                                </p>
                                                 <h3 className="text-xl font-semibold text-gray-800">{testimonial?.name}</h3>
                                                 <p className="text-blue-600 font-medium">{testimonial?.role}</p>
                                                 <a href={testimonial?.companyUrl} target={`_blank`} className="flex items-center gap-2 text-gray-500 mb-4 hover:text-gray-600 font-medium">
