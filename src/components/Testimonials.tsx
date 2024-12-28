@@ -31,7 +31,7 @@ export default function Testimonials() {
                     <h2 className="text-2xl sm:text-3xl font-bold text-gray-800">What People Say</h2>
                 </div>
 
-                <div className="relative max-w-5xl mx-auto">
+                <div className="relative max-w-6xl mx-auto">
                     <div
                         className="overflow-hidden"
                         onMouseEnter={() => setIsPaused(true)}
@@ -45,7 +45,7 @@ export default function Testimonials() {
                             }}
                         >
                             {testimonials.map((testimonial, index) => (
-                                <div key={index} className="w-full px-4">
+                                <div key={index} className="w-full px-4 mb-2">
                                     <div className="bg-white rounded-xl p-4 sm:p-6 lg:p-8 shadow-sm hover:shadow-md transition-all">
                                         <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 lg:gap-8 items-center">
                                             <div className="flex-shrink-0">
@@ -111,22 +111,24 @@ export default function Testimonials() {
                         </div>
                     </div>
 
-                    <div className="absolute top-1/2 -translate-y-1/2 w-full flex justify-between px-2">
-                        <button
-                            onClick={handlePrevious}
-                            className="bg-white p-2 sm:p-3 rounded-full shadow-lg text-gray-600 hover:text-blue-600 transition-colors"
-                            aria-label="Previous testimonial"
-                        >
-                            <ArrowLeft size={20} />
-                        </button>
-                        <button
-                            onClick={handleNext}
-                            className="bg-white p-2 sm:p-3 rounded-full shadow-lg text-gray-600 hover:text-blue-600 transition-colors"
-                            aria-label="Next testimonial"
-                        >
-                            <ArrowRight size={20} />
-                        </button>
-                    </div>
+                    <button
+                        onClick={handlePrevious}
+                        className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 bg-white p-3 rounded-full shadow-lg text-gray-600 hover:text-blue-600 transition-colors"
+                        aria-label="Previous testimonial"
+                        onMouseEnter={() => setIsPaused(true)}
+                        onMouseLeave={() => setIsPaused(false)}
+                    >
+                        <ArrowLeft size={24}/>
+                    </button>
+                    <button
+                        onClick={handleNext}
+                        className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 bg-white p-3 rounded-full shadow-lg text-gray-600 hover:text-blue-600 transition-colors"
+                        aria-label="Next testimonial"
+                        onMouseEnter={() => setIsPaused(true)}
+                        onMouseLeave={() => setIsPaused(false)}
+                    >
+                        <ArrowRight size={24}/>
+                    </button>
                 </div>
             </div>
         </section>
