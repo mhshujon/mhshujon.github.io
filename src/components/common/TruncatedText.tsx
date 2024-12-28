@@ -4,9 +4,10 @@ import { ChevronDown, ChevronUp } from 'lucide-react';
 type TruncatedTextProps = {
     text: string;
     maxLines?: number;
+    buttonClass?: string;
 };
 
-export default function TruncatedText({ text, maxLines = 2 }: TruncatedTextProps) {
+export default function TruncatedText({ text, maxLines = 2, buttonClass = `` }: TruncatedTextProps) {
     const [isExpanded, setIsExpanded] = useState(false);
     const [isTruncated, setIsTruncated] = useState(false);
     const textRef = useRef<HTMLParagraphElement>(null);
@@ -35,7 +36,7 @@ export default function TruncatedText({ text, maxLines = 2 }: TruncatedTextProps
         <div className="relative">
             <p
                 ref={textRef}
-                className={`text-gray-600`}
+                className={`text-sm sm:text-base text-gray-600 italic`}
                 style={!isExpanded ? {
                     display: '-webkit-box',
                     WebkitBoxOrient: 'vertical',
@@ -46,16 +47,18 @@ export default function TruncatedText({ text, maxLines = 2 }: TruncatedTextProps
                 {text}
             </p>
             {isTruncated && (
-                <button
-                    onClick={() => setIsExpanded(!isExpanded)}
-                    className="text-blue-600 hover:text-blue-700 text-sm font-medium flex items-center gap-1 mt-1"
-                >
-                    {isExpanded ? (
-                        <>Show Less <ChevronUp size={16} /></>
-                    ) : (
-                        <>Read More <ChevronDown size={16} /></>
-                    )}
-                </button>
+                <div className={`flex ${buttonClass} mt-1`}>
+                    <button
+                        onClick={() => setIsExpanded(!isExpanded)}
+                        className="text-blue-600 hover:text-blue-700 text-sm sm:text-base font-medium flex items-center gap-1"
+                    >
+                        {isExpanded ? (
+                            <>Show Less <ChevronUp size={16}/></>
+                        ) : (
+                            <>Read More <ChevronDown size={16}/></>
+                        )}
+                    </button>
+                </div>
             )}
         </div>
     );
