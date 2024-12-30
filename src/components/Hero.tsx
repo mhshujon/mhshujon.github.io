@@ -3,6 +3,7 @@ import SocialIcons from "./SocialIcons";
 import Button from './common/Button';
 import ResumeButton from './common/ResumeButton';
 import { useScrollTo } from "../hooks/useScrollTo";
+import { professionalSummary } from "../data/professionalSummery.ts";
 
 export default function Hero() {
     const scrollTo = useScrollTo();
@@ -19,10 +20,7 @@ export default function Hero() {
                                 Web Application <span className="text-blue-600">Engineer</span>
                             </h1>
                             <p className="text-xl text-gray-600 animate-slide-up">
-                                With over 4 years of experience, I craft scalable web applications with a focus on
-                                backend development. Passionate about programming and continuous learning, I've
-                                contributed to open-source projects like WordPress 6.4, driving innovation through
-                                high-quality code.
+                                {professionalSummary}
                             </p>
                         </div>
 
