@@ -1,5 +1,7 @@
-import {ArrowRight} from 'lucide-react';
-import SocialIcons from "./SocialIcons.tsx";
+import { ArrowRight } from 'lucide-react';
+import SocialIcons from "./SocialIcons";
+import Button from './common/Button';
+import ResumeButton from './common/ResumeButton';
 import {useScrollTo} from "../hooks/useScrollTo";
 
 export default function Hero() {
@@ -13,7 +15,6 @@ export default function Hero() {
                     src="/assets/hero-bg.webp"
                     alt="Hero background"
                     className="w-full h-full object-cover opacity-10"
-                    loading={`eager`}
                 />
             </div>
 
@@ -40,19 +41,13 @@ export default function Hero() {
                         </div>
 
                         <div className="flex flex-col sm:flex-row gap-4 animate-fade-in justify-center lg:justify-start">
-                            <span
-                              onClick={() => scrollTo('contact')}
-                              className="inline-flex items-center justify-center gap-2 bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition group cursor-pointer"
+                            <Button
+                                onClick={() => scrollTo('contact')}
+                                Icon={ArrowRight}
                             >
                                 Get in Touch
-                                <ArrowRight className="group-hover:translate-x-1 transition-transform" size={20}/>
-                            </span>
-                            <span
-                                onClick={() => scrollTo('projects')}
-                                className="inline-flex items-center justify-center border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-50 transition cursor-pointer"
-                            >
-                                View Projects
-                            </span>
+                            </Button>
+                            <ResumeButton />
                         </div>
 
                         <div className="flex gap-6 pt-4 pb-8 justify-center lg:justify-start">
@@ -70,7 +65,6 @@ export default function Hero() {
                                     src="/assets/hero-profile-img.webp"
                                     alt="Profile"
                                     className="w-full h-full object-cover rounded-full shadow-lg"
-                                    loading={`eager`}
                                 />
                             </div>
                         </div>
