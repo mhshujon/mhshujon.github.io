@@ -1,5 +1,4 @@
-import {LucideIcon} from 'lucide-react';
-import React from "react";
+import { LucideIcon } from 'lucide-react';
 
 type ButtonVariant = 'primary' | 'secondary';
 
@@ -18,7 +17,7 @@ export default function Button({
    onClick,
    className = ''
 }: ButtonProps) {
-    const baseStyles = "inline-flex items-center justify-center gap-2 px-8 py-3 rounded-lg transition";
+    const baseStyles = "inline-flex items-center justify-center gap-2 px-4 sm:px-8 py-2.5 sm:py-3 rounded-lg transition";
     const variants = {
         primary: "bg-blue-600 text-white hover:bg-blue-700",
         secondary: "border-2 border-blue-600 text-blue-600 hover:bg-blue-50"
@@ -30,7 +29,7 @@ export default function Button({
             className={`${baseStyles} ${variants[variant]} ${className}`}
         >
             {children}
-            {Icon && <Icon className="group-hover:translate-x-1 transition-transform" size={20}/>}
+            {Icon && <Icon className="group-hover:translate-x-1 transition-transform" size={18} />}
         </button>
     );
 }

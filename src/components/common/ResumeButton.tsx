@@ -6,11 +6,12 @@ export default function ResumeButton() {
         <a
             href="/resume/resume.pdf"
             download="Resume_Web_Application_Engineer_Monir.pdf"
-            className="group"
+            className="group w-full sm:w-auto"
         >
             <Button
                 variant="secondary"
                 Icon={FileDown}
+                className="w-full sm:w-auto text-sm sm:text-base whitespace-nowrap"
             >
                 Download Resume
             </Button>
