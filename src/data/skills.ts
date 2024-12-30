@@ -3,15 +3,15 @@ import {Cloud, Database, Layout, Server, Wrench} from "lucide-react";
 export const skills = {
     "Frontend": {
         icon: Layout,
-        skills: ["React", "TypeScript", "Next.js", "Tailwind CSS", "Redux"]
+        skills: ["React", "Redux", "TypeScript", "Next.js", "Tailwind CSS"]
     },
     "Backend": {
         icon: Server,
-        skills: ["PHP", "Python","Node.js", "Express.js", "GraphQL", "REST APIs"]
+        skills: ["PHP","Node.js", "Express.js", "Python", "GraphQL", "REST APIs"]
     },
     "Database": {
         icon: Database,
-        skills: ["MySQL", "PostgreSQL", "MongoDB", "Redis"]
+        skills: ["MySQL", "MongoDB", "Redis", "PostgreSQL"]
     },
     "Cloud & DevOps": {
         icon: Cloud,
