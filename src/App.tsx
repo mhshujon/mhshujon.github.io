@@ -5,6 +5,7 @@ import Projects from './components/Projects';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import Testimonials from "./components/Testimonials.tsx";
+import GitHubStats from "./components/GithubStats.tsx";
 
 function App() {
     return (
@@ -13,6 +14,7 @@ function App() {
             <Skills/>
             <Experience/>
             <Projects/>
+            <GitHubStats />
             <Testimonials/>
             <Contact/>
             <Footer/>

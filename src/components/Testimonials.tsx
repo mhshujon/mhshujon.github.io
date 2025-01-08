@@ -24,7 +24,7 @@ export default function Testimonials() {
     }, [isPaused]);
 
     return (
-        <section className="py-12 sm:py-16 lg:py-20 bg-gray-50">
+        <section className="py-12 sm:py-16 lg:py-20">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex items-center justify-center gap-2 mb-8 sm:mb-12">
                     <Quote className="text-blue-600" size={28}/>
@@ -46,7 +46,7 @@ export default function Testimonials() {
                         >
                             {testimonials.map((testimonial, index) => (
                                 <div key={index} className="w-full px-4 mb-2">
-                                    <div className="bg-white rounded-xl p-4 sm:p-6 lg:p-8 shadow-sm hover:shadow-md transition-all">
+                                    <div className="bg-white rounded-xl p-4 sm:p-6 lg:p-8 shadow-md hover:shadow-lg transition-all">
                                         <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 lg:gap-8 items-center">
                                             <div className="flex-shrink-0">
                                                 <img
