@@ -1,4 +1,5 @@
 import { ArrowRight } from 'lucide-react';
+import Typewriter from 'typewriter-effect';
 import SocialIcons from "./SocialIcons";
 import Button from './common/Button';
 import ResumeButton from './common/ResumeButton';
@@ -23,19 +24,34 @@ export default function Hero() {
 
             <div className="container mx-auto px-4 z-10">
                 <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
-                    <div className="order-2 lg:order-1 space-y-8 text-center lg:text-left">
-                        {/* Available for Projects badge */}
-                        <div className="space-y-4">
-                            <h1 className="text-5xl md:text-6xl font-bold text-gray-800 animate-fade-in leading-tight">
-                                Web Application <span className="text-blue-600">Engineer</span>
-                            </h1>
-                            <p className="text-xl text-gray-600 animate-slide-up">
+                    <div className="order-2 lg:order-1 space-y-10">
+                        <div className="space-y-6">
+                            <div>
+                                <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-800 leading-tight tracking-tight">
+                                    <Typewriter
+                                        options={{
+                                            strings: [
+                                                'WordPress Engineer',
+                                                'WordPress Core Contributor',
+                                                'WordPress Enthusiast'
+                                            ],
+                                            autoStart: true,
+                                            loop: true,
+                                            delay: 75,
+                                            deleteSpeed: 35,
+                                            pauseFor: 850,
+                                            cursor: '|'
+                                        }}
+                                    />
+                                </h1>
+                                <div className="h-1 w-24 bg-blue-600 mt-6"></div>
+                            </div>
+                            <p className="text-lg sm:text-xl text-gray-600 max-w-2xl">
                                 {professionalSummary}
                             </p>
                         </div>
 
-                        <div
-                            className="flex flex-col sm:flex-row gap-4 animate-fade-in justify-center lg:justify-start w-full">
+                        <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
                             <Button
                                 onClick={() => scrollTo('contact')}
                                 Icon={ArrowRight}
@@ -46,7 +62,7 @@ export default function Hero() {
                             <ResumeButton/>
                         </div>
 
-                        <div className="flex gap-6 pt-4 pb-8 justify-center lg:justify-start">
+                        <div className="flex gap-6">
                             <SocialIcons
                                 customClass="p-3 rounded-full bg-gray-50 text-gray-600 hover:bg-blue-50 transition-colors"
                             />
