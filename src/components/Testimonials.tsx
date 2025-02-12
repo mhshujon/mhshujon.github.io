@@ -24,7 +24,7 @@ export default function Testimonials() {
     }, [isPaused]);
 
     return (
-        <section className="py-12 sm:py-16 lg:py-20">
+        <section className="py-12 sm:py-16 lg:py-20 bg-gray-50">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex items-center justify-center gap-2 mb-8 sm:mb-12">
                     <Quote className="text-blue-600" size={28}/>
