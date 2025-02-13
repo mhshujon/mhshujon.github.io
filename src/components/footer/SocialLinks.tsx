@@ -9,7 +9,7 @@ export default function SocialLinks() {
                     MD MONIR HOSSAIN
                 </h3>
                 <p className="text-white-400 font-medium">
-                    Web Application Engineer
+                    Software Engineer
                 </p>
             </div>
 

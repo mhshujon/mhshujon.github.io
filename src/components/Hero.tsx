@@ -15,7 +15,7 @@ export default function Hero() {
             <div className="absolute inset-0 z-0">
                 <div className="absolute inset-0 bg-gradient-to-br from-blue-50 to-white opacity-90"/>
                 <img
-                    src="/assets/mern-hero-bg.webp"
+                    src="/assets/hero-bg.webp"
                     alt="MERN Stack Background"
                     className="w-full h-full object-cover opacity-10"
                     loading={`eager`}
@@ -31,16 +31,20 @@ export default function Hero() {
                                     <Typewriter
                                         options={{
                                             strings: [
-                                                'WordPress Engineer',
-                                                'WordPress Core Contributor',
-                                                'WordPress Enthusiast'
+                                                'Software <span class="text-blue-600">Engineer</span>',
+                                                'WordPress <span class="text-blue-600">Enthusiast</span>',
+                                                'Open-source <span class="text-blue-600">Contributor</span>',
+                                                'Problem <span class="text-blue-600">Solver</span>'
                                             ],
                                             autoStart: true,
                                             loop: true,
                                             delay: 75,
                                             deleteSpeed: 35,
                                             pauseFor: 850,
-                                            cursor: '|'
+                                            cursor: '|',
+                                            wrapperClassName: 'typewriter-wrapper',
+                                            cursorClassName: 'typewriter-cursor',
+                                            html: true
                                         }}
                                     />
                                 </h1>
