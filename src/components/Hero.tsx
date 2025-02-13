@@ -59,7 +59,7 @@ export default function Hero() {
                             <Button
                                 onClick={() => scrollTo('contact')}
                                 Icon={ArrowRight}
-                                className="w-full sm:w-auto text-sm sm:text-base whitespace-nowrap"
+                                className="group w-full sm:w-auto text-sm sm:text-base whitespace-nowrap"
                             >
                                 Get in Touch
                             </Button>
