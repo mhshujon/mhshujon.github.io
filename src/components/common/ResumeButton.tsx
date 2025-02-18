@@ -5,7 +5,7 @@ export default function ResumeButton() {
     return (
         <a
             href="/resume/resume.pdf"
-            download="Resume_Senior_WordPress_Engineer_Monir_5YOE.pdf"
+            download="Resume_Senior_Software_Engineer_Monir_5YOE.pdf"
             className="group w-full sm:w-auto"
         >
             <Button
